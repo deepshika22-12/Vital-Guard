@@ -1,0 +1,86 @@
+/* Background style with glowing, blurred effect */
+body {
+  background: linear-gradient(to right, #5D4B8C, #B8A9D6);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://source.unsplash.com/random/1920x1080?health') center/cover no-repeat;
+  filter: blur(15px);
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.8); /* Glassmorphism */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #ff4e50;
+  font-size: 2rem;
+}
+
+.form label {
+  display: block;
+  margin: 10px 0;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  background-color: #ff4e50;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#vitalsTable {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#vitalsTable th, #vitalsTable td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+#historyChart {
+  margin-top: 30px;
+  width: 100%;
+}
